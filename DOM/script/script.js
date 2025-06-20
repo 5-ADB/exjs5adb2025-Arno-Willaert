@@ -43,7 +43,7 @@ klanten.forEach(klant =>{
       div.value = facturenData[2]
       div.innerHTML = facturenData[2].bedrag
     }
-
+    betaaldContainer.appendChild(div)
   })
 })
 

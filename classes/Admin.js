@@ -16,8 +16,8 @@ class Factuur {
       this.betaald ? "Betaald" : "Openstaand"
     }`;
   }
-  printFacturen(){
-    console.log(`"${this.factuurnummer}," "${this.datum}","${this.bedrag}","${this.betaald}",`);
+  factuurtjes(){
+    console.log(`facturen voor karel kleintjes: "${this.factuurnummer}," "${this.datum}","${this.bedrag}","${this.betaald}",`);
   }
 }
 
@@ -28,6 +28,10 @@ class Klant {
     this.naam = naam;
     this.email = email;
     this.facturen = [];
+  }
+
+  printFacturen(){
+    console.log(`facturen voor ${this.naam}:`);
   }
 
   voegFactuurToe(factuur) {
@@ -46,7 +50,7 @@ class Klant {
 
   getTotaalBedragOpenstaand() {
     // bereken het totaal van de facturen die nog niet betaald zijn.
-    return 
+    return  
   }
 }
 
