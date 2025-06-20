@@ -38,12 +38,14 @@ klanten.forEach(klant =>{
     if (optie.value == "Karel Kleintjes"){
       div.value = facturenData[1]
       div.innerHTML = facturenData[1].bedrag
+      betaaldContainer.appendChild(div)
     }
     if (optie.value == "Els Dotjes"){
       div.value = facturenData[2]
       div.innerHTML = facturenData[2].bedrag
+      betaaldContainer.appendChild(div)
     }
-    betaaldContainer.appendChild(div)
+    
   })
 })
 
