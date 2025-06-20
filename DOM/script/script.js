@@ -33,6 +33,18 @@ klanten.forEach(klant =>{
   optie.value = klant.klantID
   optie.innerHTML = klant.naam
   klantSelect.appendChild(optie)
+  optie.addEventListener("click", function(){
+    const div = document.createElement("div")
+    if (optie.value == "Karel Kleintjes"){
+      div.value = facturenData[1]
+      div.innerHTML = facturenData[1].bedrag
+    }
+    if (optie.value == "Els Dotjes"){
+      div.value = facturenData[2]
+      div.innerHTML = facturenData[2].bedrag
+    }
+
+  })
 })
 
 // facturenData.forEach(factuur =>{
@@ -42,9 +54,7 @@ klanten.forEach(klant =>{
 //   betaaldContainer.appendChild(div)
 // })
 
-// facturenData.forEach(factuur =>{
-//   const div = document.createElement("div")
-// })
+
 // ______________________________________________________________________________________
 /**
  * Zorg ervoor dat:
