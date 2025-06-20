@@ -15,6 +15,11 @@
  * console.log("Openstaand totaal:", klant1.getTotaalBedragOpenstaand());
  * output: Openstaand totaal: 250
  */
-
-klant1.printFacturen();
-console.log("Openstaand totaal:", klant1.getTotaalBedragOpenstaand());
+const factuur = require("./Admin")
+const factuur1 = new factuur.Factuur("F2025001", "2025-06-01", 250.0)
+const factuur2 = new factuur.Factuur("F2025002", "2025-03-13", 120.0, true)
+const klant1 = new factuur.Factuur(1,"Karel Kleintjes", "karel.kleintjes@example.com")
+factuur1.printFacturen()
+factuur2.printFacturen()
+// klant1.printFacturen();
+// console.log("Openstaand totaal:", klant1.getTotaalBedragOpenstaand());

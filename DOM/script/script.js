@@ -26,6 +26,25 @@ const facturenData = {
 const klantSelect = document.getElementById("klantSelect");
 const betaaldContainer = document.getElementById("betaaldContainer");
 const nietBetaaldContainer = document.getElementById("nietBetaaldContainer");
+
+// klanten in de selectbox steken
+klanten.forEach(klant =>{
+  const optie = document.createElement("option")
+  optie.value = klant.klantID
+  optie.innerHTML = klant.naam
+  klantSelect.appendChild(optie)
+})
+
+// facturenData.forEach(factuur =>{
+//   const div = document.createElement("div")
+//   div.value = factuur.id
+//   div.innerHTML = factuur.bedrag
+//   betaaldContainer.appendChild(div)
+// })
+
+// facturenData.forEach(factuur =>{
+//   const div = document.createElement("div")
+// })
 // ______________________________________________________________________________________
 /**
  * Zorg ervoor dat:

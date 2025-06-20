@@ -1,6 +1,6 @@
 // Factuur Klasse
 class Factuur {
-  constructor(factuurnummer, datum, bedrag, betaald = false) {
+  constructor(factuurnummer, datum, bedrag, betaald) {
     this.factuurnummer = factuurnummer;
     this.datum = new Date(datum);
     this.bedrag = bedrag;
@@ -15,6 +15,9 @@ class Factuur {
     return `Factuur ${this.factuurnummer}: €${this.bedrag.toFixed(2)} - ${
       this.betaald ? "Betaald" : "Openstaand"
     }`;
+  }
+  printFacturen(){
+    console.log(`"${this.factuurnummer}," "${this.datum}","${this.bedrag}","${this.betaald}",`);
   }
 }
 
@@ -43,9 +46,11 @@ class Klant {
 
   getTotaalBedragOpenstaand() {
     // bereken het totaal van de facturen die nog niet betaald zijn.
+    return 
   }
 }
 
 module.exports = {
   Factuur,
+  Klant
 };
